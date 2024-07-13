@@ -20,10 +20,10 @@ local function setup(player)
 	Checkpoint.Parent = leaderstats;
 	leaderstats.Parent = player;
 	player.CharacterAdded:Connect(function()
-			if Checkpoint.Value > 0 then
-				local char = player.Character;
+		if Checkpoint.Value > 0 then
+			local char = player.Character;
 			char.HumanoidRootPart.CFrame = CFrame.new(CheckpointFolder[Checkpoint.Value].Position) + Vector3.new(0, 4, 0)
-			end
+		end
 	end)
 end
 
